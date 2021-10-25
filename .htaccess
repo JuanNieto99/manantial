@@ -1,0 +1,47 @@
+ Options +FollowSymLinks
+RewriteEngine on
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
+RewriteBase /manantial/
+
+Options -Indexes
+
+#RESTRINCIONES QUERY
+RewriteCond %{QUERY_STRING} (;|<|>|’|”|\)|%0A|%0D|%22|%27|%3C|%3E|%00).*(/\*|union|select|insert|cast|set|declare|drop|update|md5|benchmark) [NC,OR]
+RewriteCond %{QUERY_STRING} \.\./\.\. [OR]
+#RewriteCond %{QUERY_STRING} (localhost|loopback|127\.0\.0\.1) [NC,OR]
+RewriteCond %{QUERY_STRING} \.[a-z0-9] [NC,OR]
+RewriteCond %{QUERY_STRING} (<|>|’|%0A|%0D|%27|%3C|%3E|%00) [NC]
+
+#PETICIONES EXTERNAS	
+RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+RewriteCond %{HTTP_USER_AGENT} ^(java|curl|wget) [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} (winhttp|HTTrack|clshttp|archiver|loader|email|harvest|extract|grab|miner) [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} (libwww-perl|curl|wget|python|nikto|scan) [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} (<|>|’|%0A|%0D|%27|%3C|%3E|%00) [NC]
+
+
+RewriteRule ^(app|formatos|lenguaje|perfiles_img|socket)/ - [F]
+
+#REFERENTE
+RewriteRule ^ref=(.+)$ index.php?id=$1 [L]
+RewriteRule recuperar-clave$ recover.php?id=$1 [L]
+
+#CONFIGURACION GENERAL SERVIDOR
+#ErrorDocument 404 http://192.168.1.80/milleniumv6/web_error/404.html
+
+#RESTRINCCIONES
+RewriteRule ^admin/restringido$ web_error/restringido.html [L]  
+
+RewriteRule ^$ publico/inicio.php? [L]
+RewriteRule ^compras$ publico/compras.php? [L]
+
+
+#CoinbaseAdminIntegracionPasarela
+RewriteRule ^admin/all-compras-coinbase$ admin/solicitudes/solicitud_coinbase.php [L] 
+
+<IfModule mod_headers.c> 
+  Header set X-XSS-Protection "1; mode=block" 
+  #Header set Access-Control-Allow-Origin "*"
+</IfModule>
+

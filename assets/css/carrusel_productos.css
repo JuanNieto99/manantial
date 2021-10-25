@@ -1,0 +1,94 @@
+ 
+ /*para pc*/
+@media only screen and (min-width: 700px) {
+
+.slider {
+  width: calc(300px * 4 + 25px * 4); /* card * 4 + margin * 4 */
+  text-align: center;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+	 
+	
+}
+
+/*para movil*/
+@media only screen and (max-width: 700px) {
+	.slider {
+	 
+	  text-align: center;
+	  position: relative;
+	  padding-left: 15px;
+	  padding-right: 15px;
+	}
+ }
+
+
+.slides {
+  width: 100%; /* card * 4 + margin * 4 */
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s ease;
+}
+.slides .slide {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  height: 500px;
+  width: 300px;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-radius: 10px;
+ 
+  transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  transform: translateX(0px);
+}
+
+.slider .btn-prev,
+.slider .btn-next{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: white;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(17,17,17,.15);
+  cursor: pointer;
+  padding: 1%;
+}
+.slider .btn-prev{
+  left: -15px;
+}
+.slider .btn-next{
+  right: -15px;
+}
+.slider .btn-prev:after,
+.slider .btn-next:after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid red;
+  border-right: 1px solid red;
+}
+.slider .btn-prev:after{
+  left: 50%;
+  top: 50%;
+  transform-origin: top right;
+  transform: rotate(-135deg) translate(100%, -100%);
+}
+.slider .btn-next:after{
+      left: 50%;
+    top: 50%;
+    transform-origin: top right;
+      transform: rotate(45deg) translate(-25%, 50%);
+}
+

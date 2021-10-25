@@ -1,0 +1,1 @@
+<?php require_once '../lenguaje/spanish.php' ?>	
