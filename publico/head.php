@@ -9,6 +9,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/inicio.css">
     <link rel="stylesheet" type="text/css" href="assets/css/carrusel_productos.css">
+    <link rel="shortcut icon" href="assets/imagenes/Icono.svg">
     
 </head>
 

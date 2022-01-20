@@ -54,47 +54,6 @@
             </div>
             <div class="contenedor4 row " > 
                 <div class="col-lg-4  ">
-                    <hr style="color:#1FDB99">
-                </div>
-                <div class="contenedor3 col-lg-4 ">
-                    <div class="contenedor8"><?=manantial_11?></div>
-                </div>
-                <div class="col-lg-4 ">
-                   <hr style="color:#1FDB99">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-1 col-sm-1 "></div>
-                <div class="col-lg-2 col-sm-2 ">
-                    <img src="assets/imagenes/INGREDIENTES.svg">
-                    <p class="contenedor10"><?=manantial_12?></p>
-                </div>
-
-               <div class="col-lg-2 col-sm-2 ">
-                    <img src="assets/imagenes/LIBRES_DE_CRUELDAD_ANIMAL.svg">
-                    <p class="contenedor10"><?=manantial_13?></p>
-                </div>
-
-                <div class="col-lg-2 col-sm-2 ">
-                    <img src="assets/imagenes/SIN_PARABENOS.svg">
-                    <p class="contenedor10"><?=manantial_14?></p>
-                </div>
-
-               <div class="col-lg-2  col-sm-2">
-                    <img src="assets/imagenes/HECHOS_CON_MUCHO_AMOR.svg">
-                    <p class="contenedor10"><?=manantial_15?></p>
-                </div>
-
-               <div class="col-lg-2  col-sm-2">
-                    <img src="assets/imagenes/NO_TÓXICOS.svg">
-                    <p class="contenedor10"><?=manantial_16 ?></p>
-                </div>
-                  <div class="col-lg-1 col-sm-1 "></div>
-            </div>
-
-            <div class="contenedor4 row " > 
-                <div class="col-lg-4  ">
                     <hr >
                 </div>
                 <div class="contenedor3 col-lg-4 ">
@@ -128,7 +87,6 @@
               carSld.scrollLeft -= 220;
             };
 
-      
 
 
             </script>

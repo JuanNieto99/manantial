@@ -3,7 +3,7 @@
 @media only screen and (min-width: 700px) {
 
 .slider {
-  width: calc(300px * 4 + 25px * 4); /* card * 4 + margin * 4 */
+  width: 100%; /* card * 4 + margin * 4 */
   text-align: center;
   position: relative;
   padding-left: 15px;
